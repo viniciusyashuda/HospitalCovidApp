@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -187,6 +187,7 @@ namespace HospitalCovidApp
 
 
             Console.Write("Name: ");
+          
             name = Console.ReadLine();
             person.Name = name;
 
@@ -279,12 +280,11 @@ namespace HospitalCovidApp
         public void CovidExam()
         {
 
-            Person suspect = ExamsWard.ExamsWardHold(); 
+            Person suspect = null;
 
+            suspect = ExamsWard.ExamsWardHold();
 
             string examType, examResult, condition;
-
-           // suspect = ExamsWard.ExamsWardHold();
 
             if (suspect == null)
             {
@@ -446,7 +446,9 @@ namespace HospitalCovidApp
                 }
 
             }
+
             Console.ReadKey();
+
 
         }
 
@@ -537,8 +539,8 @@ namespace HospitalCovidApp
             Console.ReadKey();
             Console.Clear();
 
-
             Console.WriteLine("Birth date: ");
+
 
             Console.Write("Day: ");
             day = int.Parse(Console.ReadLine());
@@ -698,6 +700,7 @@ namespace HospitalCovidApp
                 person.ExamType = data[12];
                 person.ExamResult = data[13];
                 person.Hospitalization = data[14];
+
 
                 ExamsWard.InsertionExamsWard(person);
             }
