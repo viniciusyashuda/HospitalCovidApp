@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -186,7 +186,8 @@ namespace HospitalCovidApp
             Console.WriteLine("Starting now the triage, here will be saved the patient's data...");
 
 
-            Console.Write("Name:");
+            Console.Write("Name: ");
+          
             name = Console.ReadLine();
             person.Name = name;
 
@@ -284,7 +285,6 @@ namespace HospitalCovidApp
             suspect = ExamsWard.ExamsWardHold();
 
             string examType, examResult, condition;
-
 
             if (suspect == null)
             {
@@ -447,6 +447,9 @@ namespace HospitalCovidApp
 
             }
 
+            Console.ReadKey();
+
+
         }
 
         public void Discharge()
@@ -504,6 +507,8 @@ namespace HospitalCovidApp
 
             }
 
+                Console.ReadKey();
+
         }
 
         public void Emergency()
@@ -534,8 +539,8 @@ namespace HospitalCovidApp
             Console.ReadKey();
             Console.Clear();
 
+            Console.WriteLine("Birth date: ");
 
-            Console.WriteLine("Birth date:");
 
             Console.Write("Day: ");
             day = int.Parse(Console.ReadLine());
@@ -686,15 +691,16 @@ namespace HospitalCovidApp
                 person.Age = data[3];
                 person.Gender = data[4];
                 person.EntryDateTime = data[5];
-                person.Password = data[7];
-                person.Temperature = data[8];
-                person.Saturation = data[9];
-                person.Comorbidities = data[10];
-                person.Symptoms = data[11];
-                person.DaysSinceSymptomsStarted = data[12];
-                person.ExamType = data[13];
-                person.ExamResult = data[14];
-                person.Hospitalization = data[15];
+                person.Password = data[6];
+                person.Temperature = data[7];
+                person.Saturation = data[8];
+                person.Comorbidities = data[9];
+                person.Symptoms = data[10];
+                person.DaysSinceSymptomsStarted = data[11];
+                person.ExamType = data[12];
+                person.ExamResult = data[13];
+                person.Hospitalization = data[14];
+
 
                 ExamsWard.InsertionExamsWard(person);
             }
@@ -720,15 +726,15 @@ namespace HospitalCovidApp
                 person.Age = data[3];
                 person.Gender = data[4];
                 person.EntryDateTime = data[5];
-                person.Password = data[7];
-                person.Temperature = data[8];
-                person.Saturation = data[9];
-                person.Comorbidities = data[10];
-                person.Symptoms = data[11];
-                person.DaysSinceSymptomsStarted = data[12];
-                person.ExamType = data[13];
-                person.ExamResult = data[14];
-                person.Hospitalization = data[15];
+                person.Password = data[6];
+                person.Temperature = data[7];
+                person.Saturation = data[8];
+                person.Comorbidities = data[9];
+                person.Symptoms = data[10];
+                person.DaysSinceSymptomsStarted = data[11];
+                person.ExamType = data[12];
+                person.ExamResult = data[13];
+                person.Hospitalization = data[14];
 
                 InpatientWard.InsertionInpatientWard(person);
             }

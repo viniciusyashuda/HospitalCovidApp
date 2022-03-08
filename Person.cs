@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -75,7 +75,10 @@ namespace HospitalCovidApp
                 + "\nDays since symptons started: " + DaysSinceSymptomsStarted
                 + "\nComorbidities: " + Comorbidities
                 + "\nTemperature: " + Temperature
-                + "\nSaturation: " + Saturation;
+                + "\nSaturation: " + Saturation
+                + "\nExam type: " + ExamType
+                + "\nExam result: " + ExamResult
+                + "\nHospitalization: " + Hospitalization;
         }
 
 
